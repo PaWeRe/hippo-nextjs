@@ -18,7 +18,7 @@
     height: 2rem;
     border-radius: 10rem;
 
-    background-image: url('/profile_dummy.png');
-    background-size: cover;
-    background-position: center 0.115rem;
+    /** only for demo **/
+    background-color: var(--gray-dark);
+    padding: 0.25rem;
 }

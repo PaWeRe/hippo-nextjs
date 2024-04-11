@@ -2,9 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/** global theme **/
 :root {
   --white: rgb(255, 255, 255);
   --gray: rgb(222, 222, 222);
   --gray-dark: rgb(203, 203, 203);
   --blue: rgb(22, 154, 154);
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-dark);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
 }

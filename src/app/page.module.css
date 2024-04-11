@@ -36,9 +36,9 @@
     aspect-ratio: 1/1;
     border-radius: 10rem;
 
-    background-image: url('/profile_dummy.png');
-    background-size: cover;
-    background-position: center 0.6rem;
+    /** only for demo **/
+    background-color: var(--gray-dark);
+    padding: 1rem;
 }
 
 .profileDivider {
