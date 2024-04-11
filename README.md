@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hippo - Your Medical Twin watching over you 24/7.
 
-## Getting Started
+### Midterm vision (maybe feasible)
+"Getting a medical scan as easy as getting a haircut". Imagine your routine cancer screening at a local imaging center max 40min away, as follows:
 
-First, run the development server:
+1. Walk in and get scanner assigned
+2. Key personnel (e.g. nurse) does minimal preparation for scanner (security, no ferromagnetic stuff etc.)
+3. Get Scanned
+4. Walk out
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In around 45min you are done with whatever routine check-up you wanted to do. You will instantly receive your diagnosis and any proposed follow up steps via phone, delivered via Hippo in an understandable and personal way.
+The new diagnosis will be integrated and checked against your entire medical history by Hippo and counter measures to fight any upcoming symptoms can be communicated and implemented immediately in your day to day (e.g. eat more healthy, exercise more).
+Any wearables that you might wear can be connected to Hippo and can help you track daily progress and vital signs etc.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Longterm Vision (very speculative, let's go completely crazy for a minute)
+"Knowing 24/7 what is going on in your body both physically and mentally" - Can Scanners get cheaper? Will there be a future with minimalistic scanners that you can wear or that everybody can have in their homes? How will medical imaging evolve? Will it stay relevant or will at some point everything be visible through blood analysis or DNA modificaitons? Can we have an agent that can track your whole life in a privacy-preserving and trustworthy way?
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+### Proposal for EPFL AI for good Hackathon Demo
 
-To learn more about Next.js, take a look at the following resources:
+To run current next.js application, clone repo, install node packages by `npm i` and run `npm run dev`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This repo should include:
+- **Upgraded website UI**
+  - New website layout: scan with annotation + diagnosis on the right, chat interface on the left (with chat history ideally)
+  - Upload button of image studies (in medical center analogy this would happen automatically)
+  - Download button for generated radiology report 
+- **Personal Medical Chatbot (representative of your 24/7 Medical Companion)**
+  - *Input:*
+    - Output of MILA researchers prediction (score for 18 pre-defined chest xray pathologies)
+    - Patient metadata (e.g. ):
+      - wearables data input (e.g. vital signs etc.)
+      - existing medical documents
+      - previous chat interactions (all history is saved)
+  - *Output:*
+    - Non-expert explanation of the diagnosis
+    - A personalized follow-up recommendation
+      - in negative case: "Everything looks normal, congrats you seem to have a very healthy body! Here is your follow-up appointment for your next checkup. You seem to have a very healthy lifestyle, keep eating blabla food and exercising."
+      - in positive case: "It seems you could have clinically-significant prostate cancer. You have a PI-RADS score of 5, and we could observe a 10mm lesion in the anterior right base region of your prostate. Also your prostate seems to be mildly enlarge with a Volume of XY ml. Would you like a deeper explanation and simpler terms? Afterwards it would be good to schedule a checkup appointment with a Radiologist nearby to discuss the situation. Good luck!" 
+  - *Models:*
+    - Models to use: Meditron (7B or 70B is possible)
+    - Model tasks to implement:
+      - Simplify medical diagnosis and explain them to non-experts
+      - Consider medical background of patient (e.g. by prompting background information at first)
+      - Consider environment of patient and make him aware of any medical centers he could fix appointments at
+- **BONUS: Radiology report generator**
+  - Including annotated image, in universal format the findings found by algorithms + recommendation 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+NOT FOR MEDICAL USE.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This repo is based on [Chester the AI Radiology assistant](https://github.com/mlmed/chester-xray). Thank you to the authors for their great work!
