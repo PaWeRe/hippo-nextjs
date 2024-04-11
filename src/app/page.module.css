@@ -1,20 +1,25 @@
 .page {
     display: flex;
     height: 100vh;
-    background-color: aquamarine;
 }
 
 .chatHistory {
     width: 15rem;
-    background-color: blueviolet;
+    background-color: var(--gray);
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
 }
 
 .chat {
-    flex-grow: 1;
-    background-color: rgb(43, 226, 95);
+    width: 100%;
+    background-color: var(--white);
+    border-right: 0.1rem solid var(--gray);
 }
 
 .diagnosis {
-    flex-grow: 1;
-    background-color: rgb(220, 226, 43);
+    width: 100%;
+    background-color: var(--white);
 }
