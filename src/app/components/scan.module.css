@@ -1,19 +1,37 @@
 .scanParameters {
     display: flex;
     justify-content: center;
-    margin-top: 0.5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10rem;
 }
 
 .scanParameters div {
     cursor: pointer;
-    background-color: gray;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    margin-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-right: 0.1rem solid black;
+    background-color: var(--gray);
+
+    transition: background-color 300ms ease;
+}
+
+.scanParameters div:hover {
+    background-color: var(--gray-dark);
+}
+
+.scanParameters div:first-of-type {
+    border-top-left-radius: 10rem;
+    border-bottom-left-radius: 10rem;
 }
 
 .scanParameters div:last-of-type {
-    margin-right: 0rem;
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    border: none;
 }
 
 .scan {
@@ -21,6 +39,7 @@
     margin-left: auto;
     margin-right: auto;
     aspect-ratio: 1/1;
-    margin-top: 5rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
 }
 

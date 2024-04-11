@@ -1,4 +1,5 @@
 import Chat from './components/chat/chat';
+import ChatHistory from './components/chatHistory/chatHistory';
 import Scan from './components/scan';
 import TextInput from './components/textInput';
 import styles from './page.module.css'
@@ -12,6 +13,7 @@ export default function Home() {
           <div className={styles.headerSubTitle}>Version 1.0</div>
         </div>
         <div className={styles.headerDivider}></div>
+        <ChatHistory></ChatHistory>
       </div>
       <div className={styles.content}>
         <div className={styles.chat}>

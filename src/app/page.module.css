@@ -13,14 +13,16 @@
 .headerTitle {
     font-weight: 600;
     font-size: 2.5rem;
+    color: var(--blue);
 }
 
 .headerSubTitle {
     font-size: 0.9rem;
-    margin-bottom: 1rem;
 }
 
 .headerDivider {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     width: 100%;
     height: 0.1rem;
     background-color: black;
@@ -47,6 +49,7 @@
 }
 
 .diagnosis {
+    padding: 2rem;
     width: 100%;
     background-color: var(--white);
 }

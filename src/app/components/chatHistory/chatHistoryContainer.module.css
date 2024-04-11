@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-bottom: 0.1rem solid rgb(203, 203, 203);
+
+    transition: background-color 300ms ease, transform 300ms ease;
+}
+
+.container:last-of-type {
+    border: none;
+}
+
+.container:hover {
+    background-color: var(--gray-dark);
+    transform: scale(1.1);
+}
+
+.container div {
+    margin-left: auto;
+    margin-right: auto;
+}
