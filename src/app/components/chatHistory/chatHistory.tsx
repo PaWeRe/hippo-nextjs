@@ -1,14 +1,14 @@
-import styles from './chatHistory.module.css'
+import { ScanProps } from '@/app/page';
 import ChatHistoryContainer from './chatHistoryContainer';
 
-function ChatHistory() {
-    return(
+function ChatHistory({ scans }: { scans: ScanProps[] }) {
+    return (
         <div>
-            <ChatHistoryContainer></ChatHistoryContainer>
-            <ChatHistoryContainer></ChatHistoryContainer>
-            <ChatHistoryContainer></ChatHistoryContainer>
+            {scans.map((scan, index) => (
+                <ChatHistoryContainer key={index} date={scan.date}></ChatHistoryContainer>
+            ))}
         </div>
-    )
+    );
 }
 
 export default ChatHistory;

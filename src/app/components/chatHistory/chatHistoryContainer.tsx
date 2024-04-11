@@ -1,9 +1,13 @@
 import styles from './chatHistoryContainer.module.css'
 
-function ChatHistoryContainer() {
+interface ContainerProps {
+    date: String;
+}
+
+function ChatHistoryContainer({ date }: ContainerProps) {
     return(
         <div className={styles.container}>
-            <div>12.04.2024</div>
+            <div>{date}</div>
         </div>
     )
 }

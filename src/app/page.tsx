@@ -4,7 +4,42 @@ import Scan from './components/scan';
 import TextInput from './components/textInput';
 import styles from './page.module.css'
 
+export interface ChatHistroy {
+  botText: string[];
+  userText: string[];
+}
+
+export interface ScanProps {
+  date: string;
+  chatHistory: ChatHistroy;
+  // TODO: add images
+}
+
 export default function Home() {
+  const exampleScans: ScanProps[] = [
+    {
+      date: "11.04.2024",
+      chatHistory: {
+        botText: ["Welcome to the cancer detection chatbot. How can I assist you today?"],
+        userText: ["I'm feeling a bit worried about some symptoms I've been experiencing."],
+      },
+    },
+    {
+      date: "07.04.2023",
+      chatHistory: {
+        botText: ["Hello there! How can I help you today?"],
+        userText: ["I'm here for my regular check-up."],
+      },
+    },
+    {
+      date: "28.04.2022",
+      chatHistory: {
+        botText: ["Good day! What brings you here today?"],
+        userText: ["I've been having some concerning symptoms lately."],
+      },
+    },
+  ];
+
   return (
     <div className={styles.page}>
       <div className={styles.chatHistory}>
@@ -14,7 +49,7 @@ export default function Home() {
             <div className={styles.headerSubTitle}>Version 1.0</div>
           </div>
           <div className={styles.headerDivider}></div>
-          <ChatHistory></ChatHistory>
+          <ChatHistory scans={exampleScans}></ChatHistory>
         </div>
         <div>
           <div className={styles.profilePicture}>
