@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    color: black;
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+
+.container:last-of-type {
+    margin-bottom: 0rem;
+}
+
+.profileContainer {
+    margin-right: 1rem;
+}
+
+.profile {
+    margin-top: 0.25rem;
+    background-color: black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10rem;
+}

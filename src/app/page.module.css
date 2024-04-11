@@ -23,6 +23,11 @@
     border-right: 0.1rem solid var(--gray);
 }
 
+.chatContent {
+    height: 100%;
+    margin-bottom: 1rem;
+}
+
 .diagnosis {
     width: 100%;
     background-color: var(--white);
