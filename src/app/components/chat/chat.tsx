@@ -1,11 +1,10 @@
-import styles from './chat.module.css'
+import { ScanProps } from '@/app/page';
 import ChatContainer from './chatContainer';
 
-function Chat() {
-    return(
+function Chat({ scan }: { scan: ScanProps }) {
+    return (
         <div>
-            <ChatContainer></ChatContainer>
-            <ChatContainer></ChatContainer>
+            {scan.messages.map((message) => <ChatContainer message={message.message} isBot={message.isBot}></ChatContainer>)}
         </div>
     )
 }

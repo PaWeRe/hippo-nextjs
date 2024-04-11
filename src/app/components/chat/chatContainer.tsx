@@ -1,6 +1,8 @@
+import { Message } from '@/app/page';
 import styles from './chatContainer.module.css'
 
-function ChatContainer() {
+function ChatContainer({ message, isBot }: Message) {
+    // TODO: implement isBot for different profile picture: bot/user
     return (
         <div className={styles.container}>
             <div className={styles.profileContainer}>
@@ -11,7 +13,7 @@ function ChatContainer() {
                 </div>
             </div>
             <div>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                {message}
             </div>
         </div>
     )

@@ -4,40 +4,42 @@ import Scan from './components/scan';
 import TextInput from './components/textInput';
 import styles from './page.module.css'
 
-export interface ChatHistroy {
-  botText: string[];
-  userText: string[];
+export interface Message {
+  message: string;
+  isBot: boolean;
 }
-
 export interface ScanProps {
   date: string;
-  chatHistory: ChatHistroy;
+  messages: Message[];
   // TODO: add images
 }
 
 export default function Home() {
   const exampleScans: ScanProps[] = [
     {
-      date: "11.04.2024",
-      chatHistory: {
-        botText: ["Welcome to the cancer detection chatbot. How can I assist you today?"],
-        userText: ["I'm feeling a bit worried about some symptoms I've been experiencing."],
-      },
+      date: "2024-04-11",
+      messages: [
+        { message: "Initial scan results show signs of cancer.", isBot: false },
+        { message: "Please don't worry, we're here to help.", isBot: true },
+        { message: "Further tests are required for confirmation.", isBot: false }
+      ]
     },
     {
-      date: "07.04.2023",
-      chatHistory: {
-        botText: ["Hello there! How can I help you today?"],
-        userText: ["I'm here for my regular check-up."],
-      },
+      date: "2023-03-26",
+      messages: [
+        { message: "Biopsy results confirm the presence of cancer cells.", isBot: false },
+        { message: "You're not alone in this, we'll support you through it.", isBot: true },
+        { message: "Staging process begins to determine the extent of cancer spread.", isBot: false }
+      ]
     },
     {
-      date: "28.04.2022",
-      chatHistory: {
-        botText: ["Good day! What brings you here today?"],
-        userText: ["I've been having some concerning symptoms lately."],
-      },
-    },
+      date: "2022-04-13",
+      messages: [
+        { message: "Chemotherapy sessions scheduled to begin next week.", isBot: false },
+        { message: "Remember to take care of yourself and stay positive.", isBot: true },
+        { message: "Regular follow-ups planned to monitor treatment progress.", isBot: false }
+      ]
+    }
   ];
 
   return (
@@ -86,7 +88,7 @@ export default function Home() {
       </div>
       <div className={styles.content}>
         <div className={styles.chat}>
-          <Chat></Chat>
+          <Chat scan={exampleScans[0]}></Chat>
           <div>
             <TextInput></TextInput>
             <div className={styles.inputHint}>For a final verdict, always contact a professional radiologist.</div>
