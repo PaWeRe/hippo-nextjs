@@ -20,6 +20,8 @@ Any wearables that you might wear can be connected to Hippo and can help you tra
 
 ### Proposal for EPFL AI for good Hackathon Demo
 
+To run current next.js application, clone repo, install node packages by `npm i` and run `npm run dev`.
+
 This repo should include:
 - **Upgraded website UI**
   - New website layout: scan with annotation + diagnosis on the right, chat interface on the left (with chat history ideally)
