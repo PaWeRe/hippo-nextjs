@@ -4,8 +4,26 @@
 }
 
 .chatHistory {
+    padding: 1rem;
+    padding-top: 2rem;
     width: 15rem;
     background-color: var(--gray);
+}
+
+.headerTitle {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.headerSubTitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.headerDivider {
+    width: 100%;
+    height: 0.1rem;
+    background-color: black;
 }
 
 .content {
