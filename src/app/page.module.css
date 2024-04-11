@@ -4,6 +4,9 @@
 }
 
 .chatHistory {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1rem;
     padding-top: 2rem;
     width: 15rem;
@@ -28,6 +31,41 @@
     background-color: black;
 }
 
+.profilePicture {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 10rem;
+
+    background-image: url('/profile_dummy.png');
+    background-size: cover;
+    background-position: center 0.6rem;
+}
+
+.profileDivider {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--gray-dark);
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.profileBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileBottom div {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.profileBottom div:hover {
+    background-color: var(--gray-dark);
+}
+
 .content {
     display: flex;
     flex-grow: 1;
@@ -41,6 +79,13 @@
     width: 100%;
     background-color: var(--white);
     border-right: 0.1rem solid var(--gray);
+}
+
+.inputHint {
+    text-align: center;
+    font-size: small;
+    margin-top: 0.25rem;
+    margin-right: 0.5rem;
 }
 
 .chatContent {
