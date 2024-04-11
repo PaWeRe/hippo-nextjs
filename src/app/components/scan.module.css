@@ -1,0 +1,27 @@
+.scanParameters {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.scanParameters div {
+    cursor: pointer;
+    background-color: gray;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.scanParameters div:last-of-type {
+    margin-right: 0rem;
+}
+
+.scan {
+    width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    aspect-ratio: 1/1;
+    margin-top: 5rem;
+
+}
+
