@@ -9,11 +9,7 @@ interface ContainerProps {
 }
 
 function Scan({ date, isSelected, onClick }: ContainerProps) {
-    const formattedDate = date.toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    }).replace("/", ".").replace("/", ".");
+    const formattedDate = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth())).slice(-2)}.${date.getFullYear()}`;
 
     return (
         <div className={styles.container} onClick={() => onClick()}>
