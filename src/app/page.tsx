@@ -1,16 +1,14 @@
 import Chat from './components/chat/chat';
+import { MessageProps } from './components/chat/message';
 import ChatHistory from './components/chatHistory/chatHistory';
-import Scan from './components/scan';
+import ScanImage from './components/scanImage';
 import TextInput from './components/textInput';
 import styles from './page.module.css'
 
-export interface Message {
-  message: string;
-  isBot: boolean;
-}
+
 export interface ScanProps {
   date: string;
-  messages: Message[];
+  messages: MessageProps[];
   // TODO: add images
 }
 
@@ -94,7 +92,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.diagnosis}>
-          <Scan></Scan>
+          <ScanImage></ScanImage>
         </div>
       </div>
     </div>

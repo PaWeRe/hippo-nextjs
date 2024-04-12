@@ -1,7 +1,11 @@
-import { Message } from '@/app/page';
-import styles from './chatContainer.module.css'
+import styles from './message.module.css'
 
-function ChatContainer({ message, isBot }: Message) {
+export interface MessageProps {
+    message: string;
+    isBot: boolean;
+}
+
+function Message({ message, isBot }: MessageProps) {
     // TODO: implement isBot for different profile picture: bot/user
     return (
         <div className={styles.container}>
@@ -19,4 +23,4 @@ function ChatContainer({ message, isBot }: Message) {
     )
 }
 
-export default ChatContainer;
+export default Message;

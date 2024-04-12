@@ -1,10 +1,10 @@
 import { ScanProps } from '@/app/page';
-import ChatHistoryContainer from './chatHistoryContainer';
+import Scan from './scan';
 
 function ChatHistory({ scans }: { scans: ScanProps[] }) {
     return (
         <div>
-            {scans.map((scan) => (<ChatHistoryContainer date={scan.date}></ChatHistoryContainer>))}
+            {scans.map((scan) => (<Scan date={scan.date}></Scan>))}
         </div>
     );
 }

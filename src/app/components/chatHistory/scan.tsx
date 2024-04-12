@@ -1,10 +1,10 @@
-import styles from './chatHistoryContainer.module.css'
+import styles from './scan.module.css'
 
 interface ContainerProps {
     date: String;
 }
 
-function ChatHistoryContainer({ date }: ContainerProps) {
+function Scan({ date }: ContainerProps) {
     return(
         <div className={styles.container}>
             <div>{date}</div>
@@ -12,4 +12,4 @@ function ChatHistoryContainer({ date }: ContainerProps) {
     )
 }
 
-export default ChatHistoryContainer;
+export default Scan;

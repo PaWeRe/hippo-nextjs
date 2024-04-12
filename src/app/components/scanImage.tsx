@@ -1,6 +1,6 @@
-import styles from './scan.module.css'
+import styles from './scanImage.module.css'
 
-function Scan() {
+function ScanImage() {
     return (
         <div>
             <div className={styles.scanParameters}>
@@ -18,4 +18,4 @@ function Scan() {
     )
 }
 
-export default Scan;
+export default ScanImage;
