@@ -77,20 +77,34 @@
     border-right: 0.1rem solid var(--gray);
 }
 
-.inputHint {
-    text-align: center;
-    font-size: small;
-    margin-top: 0.25rem;
-    margin-right: 0.5rem;
-}
-
 .chatContent {
     height: 100%;
     margin-bottom: 1rem;
 }
 
 .diagnosis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 2rem;
     width: 100%;
     background-color: var(--white);
+}
+
+.importExport {
+    display: flex;
+    justify-content: space-between;
+}
+
+.importExport div {
+    cursor: pointer;;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--blue);
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.importExport div svg {
+    fill: white;
 }
