@@ -5,7 +5,6 @@ import ScanImage from './components/scanImage';
 import TextInput from './components/textInput';
 import styles from './page.module.css'
 
-
 export interface ScanProps {
   date: string;
   messages: MessageProps[];
@@ -17,9 +16,8 @@ export default function Home() {
     {
       date: "2024-04-11",
       messages: [
-        { message: "Initial scan results show signs of cancer.", isBot: false },
-        { message: "Please don't worry, we're here to help.", isBot: true },
-        { message: "Further tests are required for confirmation.", isBot: false }
+        { message: "It seems you could have clinically-significant prostate cancer. You have a PI-RADS score of 5, and we could observe a 10mm lesion in the anterior right base region of your prostate. Also your prostate seems to be mildly enlarge with a Volume of XY ml. Would you like a deeper explanation and simpler terms? Afterwards it would be good to schedule a checkup appointment with a Radiologist nearby to discuss the situation. Good luck!", isBot: true },
+        { message: "Yes, please tell me more about it!", isBot: false }
       ]
     },
     {

@@ -4,7 +4,7 @@ import Message from './message';
 function Chat({ scan }: { scan: ScanProps }) {
     return (
         <div>
-            {scan.messages.map((message) => <Message message={message.message} isBot={message.isBot}></Message>)}
+            {scan.messages.map((message, index) => <Message key={index} message={message.message} isBot={message.isBot}></Message>)}
         </div>
     )
 }

@@ -4,7 +4,7 @@ import Scan from './scan';
 function ChatHistory({ scans }: { scans: ScanProps[] }) {
     return (
         <div>
-            {scans.map((scan) => (<Scan date={scan.date}></Scan>))}
+            {scans.map((scan, index) => (<Scan key={index} date={scan.date}></Scan>))}
         </div>
     );
 }
