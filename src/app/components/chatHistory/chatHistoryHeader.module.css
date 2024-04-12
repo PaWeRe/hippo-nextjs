@@ -1,0 +1,17 @@
+.headerTitle {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.headerSubTitle {
+    font-size: 0.9rem;
+}
+
+.headerDivider {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 0.1rem;
+    background-color: black;
+}
