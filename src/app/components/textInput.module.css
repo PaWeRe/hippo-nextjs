@@ -1,4 +1,8 @@
 .box {
+    padding: 0rem 2rem 0rem 2rem;
+}
+
+.innerBox {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,7 +14,7 @@
     padding-left: 1.5rem;
 }
 
-.box input {
+.innerBox input {
     flex-grow: 1;
     outline: none;
     margin-right: 1rem;

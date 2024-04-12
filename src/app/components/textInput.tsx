@@ -3,6 +3,7 @@ import styles from './textInput.module.css'
 function TextInput() {
     return (
         <div className={styles.box}>
+            <div className={styles.innerBox}>
             <input type="text" placeholder="Ask Something"></input>
             <div className={styles.sendButton}>
                 <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +17,7 @@ function TextInput() {
 		L494.436,41.257C495.66,38.188,494.862,34.679,492.431,32.443z"/>
                     </g>
                 </svg>
+            </div>
             </div>
         </div>
     )

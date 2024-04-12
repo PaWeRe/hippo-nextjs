@@ -1,0 +1,8 @@
+.container {
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.innerContainer {
+    padding: 2rem;
+}
