@@ -6,7 +6,7 @@ import TextInput from './components/textInput';
 import styles from './page.module.css'
 
 export interface ScanProps {
-  date: string;
+  date: Date;
   messages: MessageProps[];
   // TODO: add images
 }
@@ -14,14 +14,14 @@ export interface ScanProps {
 export default function Home() {
   const exampleScans: ScanProps[] = [
     {
-      date: "2024-04-11",
+      date: new Date(2024, 4, 12),
       messages: [
         { message: "It seems you could have clinically-significant prostate cancer. You have a PI-RADS score of 5, and we could observe a 10mm lesion in the anterior right base region of your prostate. Also your prostate seems to be mildly enlarge with a Volume of XY ml. Would you like a deeper explanation and simpler terms? Afterwards it would be good to schedule a checkup appointment with a Radiologist nearby to discuss the situation. Good luck!", isBot: true },
         { message: "Yes, please tell me more about it!", isBot: false }
       ]
     },
     {
-      date: "2023-03-26",
+      date: new Date(2023, 2, 1),
       messages: [
         { message: "Biopsy results confirm the presence of cancer cells.", isBot: false },
         { message: "You're not alone in this, we'll support you through it.", isBot: true },
@@ -29,7 +29,7 @@ export default function Home() {
       ]
     },
     {
-      date: "2022-04-13",
+      date: new Date(2021, 11, 17),
       messages: [
         { message: "Chemotherapy sessions scheduled to begin next week.", isBot: false },
         { message: "Remember to take care of yourself and stay positive.", isBot: true },
@@ -37,6 +37,8 @@ export default function Home() {
       ]
     }
   ];
+
+  let selectedIndex = 0;
 
   return (
     <div className={styles.page}>
@@ -47,7 +49,7 @@ export default function Home() {
             <div className={styles.headerSubTitle}>Version 1.0</div>
           </div>
           <div className={styles.headerDivider}></div>
-          <ChatHistory scans={exampleScans}></ChatHistory>
+          <ChatHistory scans={exampleScans} selectedIndex={selectedIndex}></ChatHistory>
         </div>
         <div>
           <div className={styles.profileDivider}></div>
@@ -83,7 +85,7 @@ export default function Home() {
       </div>
       <div className={styles.content}>
         <div className={styles.chat}>
-          <Chat scan={exampleScans[0]}></Chat>
+          <Chat scan={exampleScans[selectedIndex]}></Chat>
           <div>
             <TextInput></TextInput>
             <div className={styles.inputHint}>For a final verdict, always contact a professional radiologist.</div>

@@ -1,10 +1,15 @@
 import { ScanProps } from '@/app/page';
 import Scan from './scan';
 
-function ChatHistory({ scans }: { scans: ScanProps[] }) {
+interface ChatHistoryProps {
+    scans: ScanProps[];
+    selectedIndex: number;
+}
+
+function ChatHistory({ scans, selectedIndex }: ChatHistoryProps) {
     return (
         <div>
-            {scans.map((scan, index) => (<Scan key={index} date={scan.date}></Scan>))}
+            {scans.map((scan, index) => (<Scan key={index} date={scan.date} index={index} selectedIndex={selectedIndex}></Scan>))}
         </div>
     );
 }
