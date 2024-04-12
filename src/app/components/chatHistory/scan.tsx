@@ -1,23 +1,23 @@
+'use client'
+
 import styles from './scan.module.css'
 
 interface ContainerProps {
     date: Date;
-    index: number;
-    selectedIndex: number;
+    isSelected: boolean;
+    onClick: () => void;
 }
 
-function Scan({ date, index, selectedIndex }: ContainerProps) {
+function Scan({ date, isSelected, onClick }: ContainerProps) {
     const formattedDate = date.toLocaleDateString('en-GB', {
         day: '2-digit',
         month: '2-digit',
         year: 'numeric'
     }).replace("/", ".").replace("/", ".");
 
-    const selected = (index === selectedIndex) ? true : false;
-
     return (
-        <div className={styles.container}>
-            <div className={`${selected ? styles.containerSelected : styles.containerUnselected}`}>
+        <div className={styles.container} onClick={() => onClick()}>
+            <div className={`${isSelected ? styles.containerSelected : styles.containerUnselected}`}>
                 <div>{formattedDate}</div>
             </div>
         </div>

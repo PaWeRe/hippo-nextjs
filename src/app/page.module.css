@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding: 1rem;
     padding-top: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
     width: 15rem;
     background-color: var(--gray);
 }
@@ -24,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
     width: 100%;
     background-color: var(--white);
     border-right: 0.1rem solid var(--gray);
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
     width: 100%;
     background-color: var(--white);
 }

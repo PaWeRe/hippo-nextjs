@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react';
 import Chat from './components/chat/chat';
 import { MessageProps } from './components/chat/message';
 import ChatHistory from './components/chatHistory/chatHistory';
@@ -14,6 +17,8 @@ export interface ScanProps {
 }
 
 export default function Home() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+
   const exampleScans: ScanProps[] = [
     {
       date: new Date(2024, 4, 12),
@@ -40,14 +45,12 @@ export default function Home() {
     }
   ];
 
-  let selectedIndex = 0;
-
   return (
     <div className={styles.page}>
       <div className={styles.chatHistory}>
         <div>
           <ChatHistoryHeader></ChatHistoryHeader>
-          <ChatHistory scans={exampleScans} selectedIndex={selectedIndex}></ChatHistory>
+          <ChatHistory scans={exampleScans} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex}></ChatHistory>
         </div>
         <ChatHistoryFooter></ChatHistoryFooter>
       </div>
