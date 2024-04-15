@@ -1,4 +1,4 @@
-# Hippo - Your Medical Twin watching over you 24/7.
+# Hippo
 
 ### Midterm vision (maybe feasible)
 "Getting a medical scan as easy as getting a haircut". Imagine your routine cancer screening at a local imaging center max 40min away, as follows:
